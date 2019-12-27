@@ -4,7 +4,9 @@ class TeamCard extends React.Component {
   render() {
     return(
       <div>
-        { this.props.name }
+        <div>{ this.props.name }</div>
+        <div>{ this.props.venue }</div>
+        <br/>
       </div>
     )
   }

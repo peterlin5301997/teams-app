@@ -18,9 +18,13 @@ class TeamsContainer extends React.Component {
 
   render() {
 
+    // console.log(this.state.teams)
+
     const teams = this.state.teams.map(team => {
-      return <TeamCard key={team.name} name={team.name} />
+      return <TeamCard key={team.id} name={team.name} venue={team.venue.name} />
     })
+
+    // console.log(teams)
 
     return(
       <div className="teams-container">
