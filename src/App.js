@@ -10,7 +10,6 @@ function App() {
   const [roster, setRoster] = useState('');
 
   const renderRoster = (rosterAPI) => {
-    // console.log(players)
     setView('roster');
     setRoster(rosterAPI);
   }

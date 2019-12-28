@@ -2,7 +2,20 @@
   text-align: center;
 }
 
-.teams-container {
+.container-column2 {
   display: grid;
   grid-template-columns: auto auto; /* number of columns */
+}
+
+.card-container {
+  display: block;
+  margin: 1% 20%;
+  padding: 1em;
+  border: solid black 1px;
+}
+
+.btn {
+  font-size: 1em;
+  padding: 0.75em 1.5em;
+  border-radius: 10px;
 }

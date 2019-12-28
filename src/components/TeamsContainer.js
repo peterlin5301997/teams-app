@@ -20,13 +20,21 @@ class TeamsContainer extends React.Component {
 
     const teams = this.state.teams.map(team => {
       let rosterAPI = `http://statsapi.mlb.com/api/v1/teams/${team.id}/roster?sportId=1&hydrate=person`
-      return <TeamCard key={team.id} name={team.name} venue={team.venue.name} roster={rosterAPI} renderRoster={this.props.renderRoster} />
+      return (
+        <TeamCard
+          key={team.id}
+          name={team.name}
+          venue={team.venue.name}
+          roster={rosterAPI}
+          renderRoster={this.props.renderRoster}
+        />  
+      )
     })
 
     return(
       <div>
         <h1>MLB Teams</h1>
-        <div className="teams-container">
+        <div className="container-column2">
           { teams }
         </div>
       </div>

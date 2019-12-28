@@ -19,7 +19,16 @@ class RosterContainer extends React.Component {
   render() {
 
     const players = this.state.roster.map(player => {
-      return <Player key={player.person.id} name={player.person.fullName} />
+      return (
+        <Player
+          key={player.person.id}
+          name={player.person.fullName}
+          age={player.person.currentAge}
+          height={player.person.height}
+          weight={player.person.weight}
+          position={player.person.primaryPosition.name}
+        />
+      )
     })
 
     console.log(this.props.roster)
@@ -27,7 +36,9 @@ class RosterContainer extends React.Component {
     return(
       <div>
         <h1>RosterContainer</h1>
-        { players }
+        <div className="container-column2">
+          { players }
+        </div>
       </div>
     )
   }
