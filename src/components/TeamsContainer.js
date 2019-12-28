@@ -18,18 +18,17 @@ class TeamsContainer extends React.Component {
 
   render() {
 
-    // console.log(this.state.teams)
-
     const teams = this.state.teams.map(team => {
-      return <TeamCard key={team.id} name={team.name} venue={team.venue.name} />
+      let rosterAPI = `http://statsapi.mlb.com/api/v1/teams/${team.id}/roster?sportId=1&hydrate=person`
+      return <TeamCard key={team.id} name={team.name} venue={team.venue.name} roster={rosterAPI} />
     })
 
-    // console.log(teams)
-
     return(
-      <div className="teams-container">
+      <div>
         <h1>MLB Teams</h1>
-        { teams }
+        <div className="teams-container">
+          { teams }
+        </div>
       </div>
     )
   }
